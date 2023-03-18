@@ -9,7 +9,8 @@
   "author": "CamiloSar",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.2",
     "nodemon": "^2.0.21"
   }
 }
