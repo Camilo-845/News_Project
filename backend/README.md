@@ -2,15 +2,24 @@
 ### **_API Rest + MongoDB_**
 
 ## Requests:
-- GET_NEWS:
-- GET_NEW_DETAIL: 
-- GET_NEWS_BY_CATEGORY: 
-- GET_CATEGORIES
-- CREATE_USER
-- DETAIL_USER: 
-- SET_USER: 
-- DELETE_USER: 
-- GET_FAVORITES: 
+- GET_NEWS ( "/new" ) :
+- GET_NEW_DETAIL ( "/new/id" ) : 
+- GET_NEWS_BY_CATEGORY ( "/new/category" ) : 
+- GET_CATEGORIES ( "/category" ) :
+- CREATE_USER ( "/user" ) :
+- DETAIL_USER ( "/user" ) : 
+- SET_USER ( "/user ") : 
+- DELETE_USER ( "/user" ) : 
+- GET_FAVORITES ( "/user" ) : 
+
+---
+## NoSQL Database (MongoDB):
+### _SQL refernece schema :_
+![ImagenRealaciones](../documentation/diagrama/diagrama%20NewsProject.drawio%20(1).png)
+### _Mongo Standard Connection :_
+```
+mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+```
 
 ---
 ## News data API: 
