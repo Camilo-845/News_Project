@@ -6,7 +6,7 @@ News project backend for the management of users and news data.
 ## **Instalation:**
 1. Clone the repository.
 2. Install the dependencies with '**npm install**'.
-3. Create the '**.env**' file with the necesary enviroment variables.
+3. Create the '**.env**' file with the necessary enviroment variables.
 
 ## **Use:**
 Run the the server with the next command:
@@ -35,7 +35,6 @@ npm start
 ```
 mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 ```
-
 ---
 ## News data API: 
 [Currents API] helps you solve this problem by curating the world news and provide them in a parsable way.
