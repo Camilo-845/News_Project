@@ -1,17 +1,32 @@
 # **API NEWS**
 ### **_API Rest + MongoDB_**
 
-## Requests:
-- GET_NEWS ( "/new" ) :
-- GET_NEW_DETAIL ( "/new/id" ) : 
-- GET_NEWS_BY_CATEGORY ( "/new/category" ) : 
-- GET_CATEGORIES ( "/category" ) :
-- CREATE_USER ( "/user" ) :
-- DETAIL_USER ( "/user" ) : 
-- SET_USER ( "/user ") : 
-- DELETE_USER ( "/user" ) : 
-- GET_FAVORITES ( "/user" ) : 
+News project backend for the management of users and news data.
 
+## **Instalation:**
+1. Clone the repository.
+2. Install the dependencies with '**npm install**'.
+3. Create the '**.env**' file with the necesary enviroment variables.
+
+## **Use:**
+Run the the server with the next command:
+~~~sh
+npm start
+~~~
+
+## **Routes:**
+- GET "/new":
+- GET "/new/id": 
+- GET "/new/category/:name": 
+- GET "/category":
+- POST "/user":
+- GET "/user": 
+- PUT "/user" : 
+- DELETE "/user": 
+- GET "/user/favorites": 
+
+## **AUTOR:**
+> Camilo Samiento  /  FullStack Developer  /   [LinkedIn] 
 ---
 ## NoSQL Database (MongoDB):
 ### _SQL refernece schema :_
@@ -29,7 +44,7 @@ mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][
 ```sh
 url = "https://api.currentsapi.services/v1/latest-news?"
 "language=us&" +
-"apiKey=API_KEY";
+"apiKey=API_KEY"
 ```
 ### Return a JSON object example: 
 ```sh
@@ -52,5 +67,5 @@ url = "https://api.currentsapi.services/v1/latest-news?"
     ]
 }
 ```
-
+[LinkedIn]: https://www.linkedin.com/in/camilo-sarmiento-051a80244/
 [Currents API]:https://currentsapi.services/en
