@@ -1,6 +1,6 @@
-const {CategorySchema} = require("./Category");
-const {FavoriteSchema} = require("./Favorites");
-const {NewSchema} = require("./News");
-const {UserSchema} = require("./User");
+const {categoryModel} = require("./Category");
+const {favoriteModel} = require("./Favorites");
+const {newModel} = require("./News");
+const {userModel} = require("./User");
 
-module.exports = {CategorySchema, FavoriteSchema, NewSchema, UserSchema}
+module.exports = {categoryModel, favoriteModel, newModel, userModel}

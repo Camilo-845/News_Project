@@ -1,5 +1,5 @@
 
-import { FavoriteSchema } from "../models";
+import { favoriteModel } from "../models";
 
 const favoriteController = {
 

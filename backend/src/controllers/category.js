@@ -1,5 +1,5 @@
 
-import { CategorySchema } from "../models";
+import { categoryModel } from "../models";
 
 const categoryController = {
 

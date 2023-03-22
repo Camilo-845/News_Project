@@ -1,4 +1,4 @@
-import { UserSchema } from "../models";
+import { userModel } from "../models";
 
 const userController = {
 

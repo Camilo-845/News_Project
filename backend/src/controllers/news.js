@@ -1,4 +1,4 @@
-import { NewSchema } from "../models";
+import { newModel } from "../models";
 
 const newController = {
 
