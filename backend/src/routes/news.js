@@ -1,6 +1,10 @@
-import newController from "../controllers/news";
-import {Router} from "express";
+const newController = require("../controllers/news");
+const {Router} = require("express");
 
 const router = Router();
 
-export default router;
+router.get("/", newController.getNews);
+router.get("/:id", newController.getNewByID);
+router.get("/category/:name", newController.getNewsByCategory);
+
+module.exports =  router;

@@ -1,7 +1,7 @@
-import { userModel } from "../models";
+const userModel = require("../models")
 
 const userController = {
 
 };
 
-export default userController;
+module.exports =  userController;

@@ -1,8 +1,7 @@
-
-import { categoryModel } from "../models";
+const categoryModel = require("../models")
 
 const categoryController = {
 
 }
 
-export default categoryController;
+module.exports = categoryController;

@@ -1,9 +1,11 @@
-import category from "./category";
-import news from "./news";
-import user from "./user";
+const category  = require("./category");
+const news  = require("./news");
+const user  = require("./user");
 
-import { Router } from "express";
+const Router = require("express")
 
 const routers = Router();
 
-export default routers;
+routers.use("/news", news)
+
+module.exports = routers

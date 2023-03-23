@@ -1,6 +1,6 @@
-import categoryController from "../controllers";
-import {Router} from "express";
+const categoryController = require("../controllers");
+const {Router} = require("express")
 
 const router = Router();
 
-export default router;
+module.exports = router
