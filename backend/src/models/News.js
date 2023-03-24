@@ -1,7 +1,6 @@
 const {Schema, model} = require("mongoose");
 const NewSchema = new Schema(
     {   
-        news:[{
             id:{
                 type: String,
                 unique: true,
@@ -29,9 +28,8 @@ const NewSchema = new Schema(
                 type:Array
             },
             published:{
-                type:String,
-            }
-        }]  
+                type:Date,
+            },
     },
     {
         timestamps: true,
