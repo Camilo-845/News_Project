@@ -3,10 +3,8 @@ const CategorySchema = new Schema(
     {
         name:{
             type: String,
+            unique: true,
         },
-        news:{
-            type:Array,
-        }
     },
     {
         timestamps: true,
