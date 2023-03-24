@@ -28,6 +28,9 @@ npm start
 
     > response = Array:[ { new }, { new }, { new }, ... ] ( max = 10 ) or [ ]
 - GET "/category":
+    >request = { }
+
+    >response = Array:[ {category} , {category} , {category} , ... ] or [ ]
 - POST "/user":
 - GET "/user": 
 - PUT "/user" : 
