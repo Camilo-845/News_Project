@@ -15,9 +15,11 @@ npm start
 ~~~
 
 ## **Routes:**
-- GET "/new":
-- GET "/new/id": 
-- GET "/new/category/:name": 
+- GET "/news":
+    - request: query= {page : number}
+    - reponse: [{new},{new},{new},...] (max = 15)
+- GET "/news/id": 
+- GET "/news/category/:name": 
 - GET "/category":
 - POST "/user":
 - GET "/user": 

@@ -8,11 +8,12 @@ const {NEWS_API_KEY} = process.env;
 const newController = {
     getNews:async (req, res)=>{
         try{
+            var {page} = req.query;
+            page = (page<=0)? 0 : page-1;
             const lastUpdate = await newModel.findOne().sort({ updatedAt: -1 }).limit(1);
             var minutesFromLastUpdate = parseInt(moment(lastUpdate.updatedAt).fromNow(true));
             minutesFromLastUpdate = (isNaN(minutesFromLastUpdate))? 0 : minutesFromLastUpdate;
             if(minutesFromLastUpdate>60){
-                console.log("visitar")
                 const URL = "https://api.currentsapi.services/v1/latest-news?"+`apiKey=${NEWS_API_KEY}`
                 const data = await axios(URL);
                 const news = data.data.news.map((e)=>{
@@ -41,7 +42,7 @@ const newController = {
                   )
                 );            
             }
-            const dateAll = await newModel.find({});
+            const dateAll = await newModel.find({}).sort({updatedAt:-1}).skip(page*15).limit(15);
             return res.json(dateAll);
         }catch(err){
             console.error(new Error(err).message);
