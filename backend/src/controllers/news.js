@@ -50,7 +50,15 @@ const newController = {
         }
     },
     getNewByID:async (req, res)=>{
-
+      try{
+        const {id} = req.params;
+        const dbData = await newModel.findOne({id:id})
+        console.log(dbData)
+        res.status(200).json(dbData);
+      }catch(err){
+        console.error(new Error(err).message);
+        res.status(400).json({Error: new Error(err).message})
+      }
     },
     getNewsByCategory:async (req, res)=>{
 

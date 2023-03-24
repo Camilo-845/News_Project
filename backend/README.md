@@ -17,8 +17,10 @@ npm start
 ## **Routes:**
 - GET "/news":
     - request: query= {page : number}
-    - reponse: [{new},{new},{new},...] (max = 15)
-- GET "/news/id": 
+    - reponse: Array: [{new},{new},{new},...] (max = 15) or [ ]
+- GET "/news/:id":
+    - request: params = id
+    - response: Object: {new} or null
 - GET "/news/category/:name": 
 - GET "/category":
 - POST "/user":
