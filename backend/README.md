@@ -15,27 +15,33 @@ npm start
 ~~~
 
 ## **Routes:**
+### New :
 - GET "/news":
-    > request = { query : { page : number } }
+    > Request = { query : { page : number } }
 
     > reponse = Array: [ { new }, { new }, { new }, ... ] ( max = 15 ) or [ ]
 - GET "/news/:id":
-    > request = { params = id }
+    > Request = { params = id }
 
-    > response = Object: { new } or null
+    > Response = Object: { new } or null
 - GET "/news/category/:name": 
-    > request = { params : name , query : {page : number} }
+    > Request = { params : name , query : {page : number} }
 
-    > response = Array:[ { new }, { new }, { new }, ... ] ( max = 10 ) or [ ]
+    > Response = Array:[ { new }, { new }, { new }, ... ] ( max = 10 ) or [ ]
+### Category:
 - GET "/category":
-    >request = { }
+    >Request = { }
 
-    >response = Array:[ {category} , {category} , {category} , ... ] or [ ]
-- POST "/user/login":
-    >request = { body: username, mail, password }
+    >Response = Array:[ {category} , {category} , {category} , ... ] or [ ]
+### User:
+- POST "/user/signup":
+    >Request = { body: username, mail, password }
 
-    >response = { message:String , result: {user} }
-- GET "/user": 
+    >Response = { message:String , result: {user} }
+- GET "/user/login": 
+    >Request = { body: mail, password }
+
+    >Response = {token: "", expiresIn: 86400}
 - PUT "/user" : 
 - DELETE "/user": 
 - GET "/user/favorites": 
