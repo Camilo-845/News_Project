@@ -31,7 +31,10 @@ npm start
     >request = { }
 
     >response = Array:[ {category} , {category} , {category} , ... ] or [ ]
-- POST "/user":
+- POST "/user/login":
+    >request = { body: username, mail, password }
+
+    >response = { message:String , result: {user} }
 - GET "/user": 
 - PUT "/user" : 
 - DELETE "/user": 

@@ -6,16 +6,19 @@ const UserSchema = new Schema(
         username:{
             type:String,
             unique:true,
+            required:true,
         },
         password:{
             type:String,
+            required:true,
         },
         mail:{
             type:String,
+            required:true,
             unique:true,
         },
         favorites:{
-            type:String,
+            type:Array,
         },
     },
     {
