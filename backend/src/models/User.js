@@ -36,7 +36,7 @@ UserSchema.statics.comparePassword = async (
     password,
     receivedPassword
   ) => {
-    return await bcrypt.compare(password, receivedPassword);
+    return await bcrypt.compare(receivedPassword, password);
   };
 
 const userModel = model('user', UserSchema);
