@@ -42,7 +42,9 @@ npm start
     >Request = { body: mail, password }
 
     >Response = {token: "", expiresIn: 86400}
-- PUT "/user" : 
+- PUT "/user/update/password" :
+    >Request = {headers: token , body: lastPassword, newPassword}
+    >Response = {message , result: {user}}
 - DELETE "/user": 
 - GET "/user/favorites": 
 
