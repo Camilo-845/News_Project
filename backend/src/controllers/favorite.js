@@ -1,8 +1,7 @@
-
-import { FavoriteSchema } from "../models";
+const   {favoriteModel} = require("../models")
 
 const favoriteController = {
 
 };
 
-export default favoriteController;
+module.exports =  favoriteController;

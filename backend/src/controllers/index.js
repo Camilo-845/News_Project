@@ -1,7 +1,7 @@
-import categoryController from "./category";
-import favoriteController from "./favorite"
-import newController from "./news";
-import userController from "./user";
+const categoryController = require("./category")
+const favoriteController = require("./favorite")
+const newController = require("./news")
+const userController = require("./user")
 
 module.exports = {
     categoryController,

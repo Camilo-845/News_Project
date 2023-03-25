@@ -15,13 +15,36 @@ npm start
 ~~~
 
 ## **Routes:**
-- GET "/new":
-- GET "/new/id": 
-- GET "/new/category/:name": 
+### New :
+- GET "/news":
+    > Request = { query : { page : number } }
+
+    > reponse = Array: [ { new }, { new }, { new }, ... ] ( max = 15 ) or [ ]
+- GET "/news/:id":
+    > Request = { params = id }
+
+    > Response = Object: { new } or null
+- GET "/news/category/:name": 
+    > Request = { params : name , query : {page : number} }
+
+    > Response = Array:[ { new }, { new }, { new }, ... ] ( max = 10 ) or [ ]
+### Category:
 - GET "/category":
-- POST "/user":
-- GET "/user": 
-- PUT "/user" : 
+    >Request = { }
+
+    >Response = Array:[ {category} , {category} , {category} , ... ] or [ ]
+### User:
+- POST "/user/signup":
+    >Request = { body: username, mail, password }
+
+    >Response = { message:String , result: {user} }
+- GET "/user/login": 
+    >Request = { body: mail, password }
+
+    >Response = {token: "", expiresIn: 86400}
+- PUT "/user/update/password" :
+    >Request = {headers: token , body: lastPassword, newPassword}
+    >Response = {message , result: {user}}
 - DELETE "/user": 
 - GET "/user/favorites": 
 

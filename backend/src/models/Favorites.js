@@ -1,7 +1,9 @@
-import { Schema, model } from "mongoose";
+const {Schema, model} = require("mongoose");
 const FavoriteSchema = new Schema(
     {
-        
+        new:{
+            type: String,
+        }
     },
     {
         timestamps: true,
@@ -9,4 +11,5 @@ const FavoriteSchema = new Schema(
     }
 );
 
-module.exports = {FavoriteSchema};
+const favoriteModel = model("favorite", FavoriteSchema)
+module.exports = {favoriteModel};

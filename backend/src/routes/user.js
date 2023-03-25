@@ -1,6 +1,11 @@
-import userController from "../controllers/user";
-import {Router} from "express";
+const userController = require("../controllers/user")
+const {Router} = require("express");
+const check_auth = require("./check-auth")
 
 const router = Router();
 
-export default router;
+router.post("/signup",userController.signupUser);
+router.post("/login",userController.loginUser);
+router.put("/update/password",check_auth, userController.putPasswordUser)
+
+module.exports =  router;
