@@ -1,7 +1,6 @@
 const {userModel} = require("../models")
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
 
 require("dotenv").config();
 const {JWT_KEY} = process.env;
@@ -34,7 +33,7 @@ const userController = {
     loginUser: async(req , res , next)=>{
         try{
             const {mail, password} = req.body;
-            const userData = await userModel.findOne({mail: mail});
+            const userData = await userModel.findOne({mail: mail, isActive:true});
             if(Object.keys(userData).length<=0) return res.status(400).json({message: "Failed Authentition, user not found"})
             const compare = await userModel.comparePassword(userData.password,password);
             if(!compare) return res.status(400).json({message:"Failed Authentication, Invalid password"})            
@@ -62,6 +61,16 @@ const userController = {
             res.status(200).json({message: "user password updated", result: updatedUserData})
         }catch(err){
             res.status(400).json({message:"Failed password change", Error: new Error(err).message})
+        }
+    },
+    
+    deleteUser: async(req,res)=>{
+        try{
+            const {userId} = req.userData;
+            await userModel.findByIdAndUpdate(userId, {isActive: false});
+            res.status(200).json({message:"Succesful user delete"})
+        }catch(err){
+            res.status(400).json({message: "Failed delete user", Error: new Error(err).message})
         }
     }
 };

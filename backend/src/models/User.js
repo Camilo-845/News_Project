@@ -20,6 +20,10 @@ const UserSchema = new Schema(
         favorites:{
             type:Array,
         },
+        isActive:{
+            type:Boolean,
+            default:true,
+        }
     },
     {
         timestamps: true,

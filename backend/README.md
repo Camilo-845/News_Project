@@ -28,6 +28,8 @@ npm start
     > Request = { params : name , query : {page : number} }
 
     > Response = Array:[ { new }, { new }, { new }, ... ] ( max = 10 ) or [ ]
+- POST "/news/favorite":
+- POST "/news/comentary":
 ### Category:
 - GET "/category":
     >Request = { }
@@ -46,7 +48,6 @@ npm start
     >Request = {headers: token , body: lastPassword, newPassword}
     >Response = {message , result: {user}}
 - DELETE "/user": 
-- GET "/user/favorites": 
 
 ## **AUTOR:**
 > Camilo Samiento  /  FullStack Developer  /   [LinkedIn] 
