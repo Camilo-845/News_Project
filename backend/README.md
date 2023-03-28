@@ -29,6 +29,10 @@ npm start
 
     > Response = Array:[ { new }, { new }, { new }, ... ] ( max = 10 ) or [ ]
 - POST "/news/favorite":
+    >Request = { headers: token} , {query: {newId} }
+- GET "/news/favorite":
+    >Request = {headers : token}
+    >Response = [ {new} , {new} , {new} , {new} , ... ]
 - POST "/news/comentary":
 ### Category:
 - GET "/category":
@@ -48,6 +52,7 @@ npm start
     >Request = {headers: token , body: lastPassword, newPassword}
     >Response = {message , result: {user}}
 - DELETE "/user": 
+    >Request = {headers: token}
 
 ## **AUTOR:**
 > Camilo Samiento  /  FullStack Developer  /   [LinkedIn] 

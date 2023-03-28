@@ -1,4 +1,4 @@
-const {newModel,categoryModel} = require("../models");
+const {newModel,categoryModel, userModel} = require("../models");
 const moment = require("moment");
 const axios = require("axios");
 
@@ -49,6 +49,7 @@ const newController = {
             res.status(400).json({"Error": new Error(err).message})
         }
     },
+
     getNewByID:async (req, res)=>{
       try{
         const {id} = req.params;
@@ -60,6 +61,7 @@ const newController = {
         res.status(400).json({Error: new Error(err).message})
       }
     },
+
     getNewsByCategory:async (req, res)=>{
       try{
         const {name} = req.params;
@@ -74,6 +76,32 @@ const newController = {
         res.status(200).json({error:new Error(err).message})
       }
     },
+
+    postFavoriteNew: async(req,res)=>{
+      try{
+        const {userId} = req.userData;
+        const {newId} = req.query;
+        if(!newId)return res.status(400).json({message: "Failed favorrite new change, newId param is not provided"})
+        const userData = await userModel.findById(userId);
+        const newData = await newModel.findOne({id:newId});
+        if(Object.keys(userData)<=0)return res.status(400).json({message: "Failed favorite new change, user not found"});
+        if(Object.keys(newData)<=0)return res.status(400).json({message: "Failed favorite new change, new not found"});
+        if(!userData.favorites){
+          await userModel.findByIdAndUpdate(userId,{favorites:[newId]},{upsert: true})
+        }else{
+          if(userData.favorites.includes(newId)){
+            var favorites = userData.favorites.filter(el=>el!==newId)
+            await userModel.findByIdAndUpdate(userId,{favorites:favorites})
+          }else{
+            var favorites = [...userData.favorites, newId]
+            await userModel.findByIdAndUpdate(userId,{favorites:favorites})
+          }
+        }
+        res.status(200).json({message:"Favorite new changed"})
+      }catch(err){
+        res.status(400).json({message: "Failed favorite new change", Error: new Error(err).message})
+      }
+    }
 }
 
 module.exports = newController;
