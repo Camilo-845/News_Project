@@ -84,8 +84,8 @@ const newController = {
         if(!newId)return res.status(400).json({message: "Failed favorrite new change, newId param is not provided"})
         const userData = await userModel.findById(userId);
         const newData = await newModel.findOne({id:newId});
-        if(Object.keys(userData)<=0)return res.status(400).json({message: "Failed favorite new change, user not found"});
-        if(Object.keys(newData)<=0)return res.status(400).json({message: "Failed favorite new change, new not found"});
+        if(Object.keys(userData).length<=0)return res.status(400).json({message: "Failed favorite new change, user not found"});
+        if(Object.keys(newData).length<=0)return res.status(400).json({message: "Failed favorite new change, new not found"});
         if(!userData.favorites){
           await userModel.findByIdAndUpdate(userId,{favorites:[newId]},{upsert: true})
         }else{
@@ -100,6 +100,26 @@ const newController = {
         res.status(200).json({message:"Favorite new changed"})
       }catch(err){
         res.status(400).json({message: "Failed favorite new change", Error: new Error(err).message})
+      }
+    },
+
+    getFavoriteNews: async(req,res) =>{
+      try{
+        const {userId} = req.userData;
+        userData = await userModel.findById(userId);
+        if(Object.keys(userData).length<=0)return res.status(400).json({message: "Failed favorites news detail, user not found"});
+        var newsResult = []
+        const news = userData.favorites.map(el=>{
+          return newModel.findOne({id:el})
+          .then(neew =>{
+            newsResult.push(neew)
+          })
+          .catch(err=>console.log("Error al buscar la noticia"))
+        })
+        await Promise.all(news)
+        res.status(200).json({message:"Sucessful favorites detail", result: newsResult})
+      }catch(err){
+        res.status(400).json({message:"Failed favorites news detail", Error: new Error(err).message})
       }
     }
 }
