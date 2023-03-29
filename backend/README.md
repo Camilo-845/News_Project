@@ -33,7 +33,8 @@ npm start
 - GET "/news/favorite":
     >Request = {headers : token}
     >Response = [ {new} , {new} , {new} , {new} , ... ]
-- POST "/news/comentary":
+- POST "/news/commentary":
+    >Request = { headers : token } , { body : { newId : [String], comment : [String] } }
 ### Category:
 - GET "/category":
     >Request = { }
