@@ -13,17 +13,27 @@ Run the the server with the next command:
 ~~~sh
 npm start
 ~~~
-
+---
 ## **Routes:**
-### New :
-- GET "/news":
-    > Request = { query : { page : number } }
+## New :
+### `GET "/news":`
+Return a List of last news of all categories with request pagination.
 
-    > reponse = Array: [ { new }, { new }, { new }, ... ] ( max = 15 ) or [ ]
-- GET "/news/:id":
-    > Request = { params = id }
+**_Inputs_**:
+- `page:` number of the page of news data
 
-    > Response = Object: { new } or null
+**_Outputs_**:
+- `200 OK` -  with a JSON array containing the with maxumum 15 last news
+- `400 Bad Request` - if the data is not valid
+### `GET "/news/:id":`
+Return a JSON Object containng the new with the id provided. 
+
+**_Inputs_**:
+- `id:` parameter "id" of the new Model
+
+**_Outputs_**:
+- `200 OK` -  with a JSON Object containing the new data
+- `400 Bad Request` - if the data is not valid
 - GET "/news/category/:name": 
     > Request = { params : name , query : {page : number} }
 
