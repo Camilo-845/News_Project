@@ -117,11 +117,35 @@ const newController = {
           .catch(err=>console.log("Error al buscar la noticia"))
         })
         await Promise.all(news)
-        res.status(200).json({message:"Sucessful favorites detail", result: newsResult})
+        res.status(200).json({message:"Successful favorites detail", result: newsResult})
       }catch(err){
         res.status(400).json({message:"Failed favorites news detail", Error: new Error(err).message})
       }
-    }
+    },
+
+    postComentary: async (req,res)=>{
+      try{
+        const {userId} = req.userData;
+        const {newId, comment} = req.body;
+        if(!newId || !comment) return res.status(400).json({message: "Failed post new comment, params not provided"});
+
+        const userData = await userModel.findOne({_id: userId});
+        if(userData===null) return res.status(400).json({message: "Failed post new comment, User not found"});
+        
+        const newData = await newModel.findOne({id: newId});
+        if(newData===null) return res.status(400).json({message: "Failed post new comment, New data not found"});
+        if(newData.comments){
+          const comments = [...newData.comments,{user: userData.username, comment:comment}];
+          await newModel.findOneAndUpdate({id:newId},{comments:comments})
+        }else{
+          await newModel.findOneAndUpdate({id:newId},{comments:[{user:userData.username,comment:comment}]},{upsert: true})
+        }
+        const newData2 = await newModel.findOne({id: newId});
+        res.status(200).json({message:"successfull post comment"})
+      }catch(err){
+        res.status(400).json({message: "Failed post new comment", Error: new Error(err).message})
+      }
+    },
 }
 
 module.exports = newController;
