@@ -6,6 +6,7 @@ require("dotenv").config();
 const {JWT_KEY} = process.env;
 
 const userController = {
+
     signupUser: async(req , res , next)=>{
         try{
             const {username, mail, password} = req.body;
@@ -30,6 +31,7 @@ const userController = {
         }
 
     },
+
     loginUser: async(req , res , next)=>{
         try{
             const {mail, password} = req.body;
@@ -47,6 +49,18 @@ const userController = {
             res.status(400).json({message: "Authentication error", Error: new Error(err).message})
         }
     },
+
+    getDetail : async(req,res)=>{
+        try{
+            const {userId} = req.userData;
+            const userData = await userModel.findOne({_id: userId});
+            if(userData===null)return res.status(400).json({message: "Failed search user detail, user not found"});
+            res.status(200).json({message:"sucessfull user detail search", result: userData})
+        }catch(err){
+            res.status(400).json({message: "Failed search user detail", Error: new Error(err).message})
+        }
+    },
+
     putPasswordUser: async(req,res)=>{
         try{
             const {userId} = req.userData;
