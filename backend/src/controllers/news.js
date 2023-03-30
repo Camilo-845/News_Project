@@ -42,11 +42,10 @@ const newController = {
                 await Promise.all(categoriesPromise);            
             }
             const dateAll = await newModel.find({}).sort({updatedAt:-1}).skip(page*15).limit(15);
-            const categories1 = await categoryModel.find({});
-            return res.json(dateAll);
+            return res.status(200).json(dateAll);
         }catch(err){
             console.error(new Error(err).message);
-            res.status(400).json({"Error": new Error(err).message})
+            res.status(500).json({"Error": new Error(err).message})
         }
     },
 
@@ -58,7 +57,7 @@ const newController = {
         res.status(200).json(dbData);
       }catch(err){
         console.error(new Error(err).message);
-        res.status(400).json({Error: new Error(err).message})
+        res.status(500).json({Error: new Error(err).message})
       }
     },
 
@@ -73,7 +72,7 @@ const newController = {
         res.status(200).json(dbData);
       }catch(err){
         console.error(new Error(err).message)
-        res.status(200).json({error:new Error(err).message})
+        res.status(500).json({error:new Error(err).message})
       }
     },
 
@@ -84,8 +83,8 @@ const newController = {
         if(!newId)return res.status(400).json({message: "Failed favorrite new change, newId param is not provided"})
         const userData = await userModel.findById(userId);
         const newData = await newModel.findOne({id:newId});
-        if(Object.keys(userData).length<=0)return res.status(400).json({message: "Failed favorite new change, user not found"});
-        if(Object.keys(newData).length<=0)return res.status(400).json({message: "Failed favorite new change, new not found"});
+        if(Object.keys(userData).length<=0)return res.status(404).json({message: "Failed favorite new change, user not found"});
+        if(Object.keys(newData).length<=0)return res.status(404).json({message: "Failed favorite new change, new not found"});
         if(!userData.favorites){
           await userModel.findByIdAndUpdate(userId,{favorites:[newId]},{upsert: true})
         }else{
@@ -97,9 +96,9 @@ const newController = {
             await userModel.findByIdAndUpdate(userId,{favorites:favorites})
           }
         }
-        res.status(200).json({message:"Favorite new changed"})
+        res.status(201).json({message:"Favorite new changed"})
       }catch(err){
-        res.status(400).json({message: "Failed favorite new change", Error: new Error(err).message})
+        res.status(500).json({message: "Failed favorite new change", Error: new Error(err).message})
       }
     },
 
@@ -107,7 +106,7 @@ const newController = {
       try{
         const {userId} = req.userData;
         userData = await userModel.findById(userId);
-        if(Object.keys(userData).length<=0)return res.status(400).json({message: "Failed favorites news detail, user not found"});
+        if(Object.keys(userData).length<=0)return res.status(404).json({message: "Failed favorites news detail, user not found"});
         var newsResult = []
         const news = userData.favorites.map(el=>{
           return newModel.findOne({id:el})
@@ -119,7 +118,7 @@ const newController = {
         await Promise.all(news)
         res.status(200).json({message:"Successful favorites detail", result: newsResult})
       }catch(err){
-        res.status(400).json({message:"Failed favorites news detail", Error: new Error(err).message})
+        res.status(500).json({message:"Failed favorites news detail", Error: new Error(err).message})
       }
     },
 
@@ -130,10 +129,10 @@ const newController = {
         if(!newId || !comment) return res.status(400).json({message: "Failed post new comment, params not provided"});
 
         const userData = await userModel.findOne({_id: userId});
-        if(userData===null) return res.status(400).json({message: "Failed post new comment, User not found"});
+        if(userData===null) return res.status(404).json({message: "Failed post new comment, User not found"});
         
         const newData = await newModel.findOne({id: newId});
-        if(newData===null) return res.status(400).json({message: "Failed post new comment, New data not found"});
+        if(newData===null) return res.status(404).json({message: "Failed post new comment, New data not found"});
         if(newData.comments){
           const comments = [...newData.comments,{user: userData.username, comment:comment}];
           await newModel.findOneAndUpdate({id:newId},{comments:comments})
@@ -141,9 +140,9 @@ const newController = {
           await newModel.findOneAndUpdate({id:newId},{comments:[{user:userData.username,comment:comment}]},{upsert: true})
         }
         const newData2 = await newModel.findOne({id: newId});
-        res.status(200).json({message:"successfull post comment"})
+        res.status(201).json({message:"successfull post comment"})
       }catch(err){
-        res.status(400).json({message: "Failed post new comment", Error: new Error(err).message})
+        res.status(500).json({message: "Failed post new comment", Error: new Error(err).message})
       }
     },
 }
