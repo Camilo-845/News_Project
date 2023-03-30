@@ -178,7 +178,7 @@ __Outputs__:
 - `500 Internal Server Error` if there is an internal server error.
 
 
-## **AUTOR:**
+## **AUTHOR:**
 > Camilo Samiento  /  FullStack Developer  /   [LinkedIn] 
 ---
 ## NoSQL Database (MongoDB):
