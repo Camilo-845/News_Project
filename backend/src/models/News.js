@@ -30,6 +30,10 @@ const NewSchema = new Schema(
             published:{
                 type:Date,
             },
+            comments:{
+                type:Array,
+                default:[],
+            }
     },
     {
         timestamps: true,

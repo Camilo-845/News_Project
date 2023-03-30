@@ -7,7 +7,7 @@ const categoryController = {
             res.status(200).json(dbData)
         }catch(err){
             console.error(new Error(err).message);
-            res.status(400).json({error: new Error(err).message})
+            res.status(500).json({error: new Error(err).message})
         }
     }
 
