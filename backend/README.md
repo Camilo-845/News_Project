@@ -6,7 +6,7 @@ News project backend for the management of users and news data.
 ## **Instalation:**
 1. Clone the repository.
 2. Install the dependencies with '**npm install**'.
-3. Create the '**.env**' file with the necessary enviroment variables.
+3. Create the '**.env**' file with the necessary [enviroment variables](#env-enviroment-variables).
 
 ## **Use:**
 Run the the server with the next command:
@@ -178,8 +178,6 @@ __Outputs__:
 - `500 Internal Server Error` if there is an internal server error.
 
 
-## **AUTHOR:**
-> Camilo Samiento  /  FullStack Developer  /   [LinkedIn] 
 ---
 ## NoSQL Database (MongoDB):
 ### _SQL refernece schema :_
@@ -219,5 +217,15 @@ url = "https://api.currentsapi.services/v1/latest-news?"
     ]
 }
 ```
+---
+## __.env Enviroment Variables__:
+- `DB_URI` : Mongo Standard Connection
+- `NEWS_API_KEY` : [Currents API] key
+- `PORT` : API listen port
+- `JWT_KEY` : Secret hash key
+---
+## **AUTHOR:**
+### Camilo Samiento  /  FullStack Developer  /   [LinkedIn] 
+
 [LinkedIn]: https://www.linkedin.com/in/camilo-sarmiento-051a80244/
 [Currents API]:https://currentsapi.services/en
