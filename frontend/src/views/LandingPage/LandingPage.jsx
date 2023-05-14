@@ -19,9 +19,21 @@ function LandingPage() {
                     </button>
                 </section>
             </header>
-            <main>
-                <article>
-
+            <main className={styles.mainSection}>
+                <article className={styles.mainText}>
+                    <h1 className={styles.punchline}><span>The most relevant and up-to-date news, all in one place:</span>  <span className={styles.actualityH1}>Actuality</span></h1>
+                    <section className={styles.categoriesList}>
+                        <h4>Breaking News</h4>
+                        <h4>Politics</h4>
+                        <h4>Business</h4>
+                        <h4>Technology</h4>
+                        <h4>Entertainment</h4>
+                        <h4>Sports</h4>
+                    </section>
+                    <article className={styles.welcomeButtons}>
+                        <button>SignUp</button>
+                        <button>See more</button>
+                    </article>
                 </article>
                 <article>
                     <figure>
