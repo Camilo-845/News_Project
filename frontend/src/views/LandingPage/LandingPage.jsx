@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./LandingPage.module.css"
+import referenceImage from "../../../../referenceImages/_06aded8d-679a-4e15-9333-0de56adecb84.jpg"
+import Bubble from "../../components/Bubble/Bubble";
 
 function LandingPage() {
     return (
         <article className={styles.mainContainer}>
+            <Bubble size="30rem" right="1rem"></Bubble>
+            <Bubble size="31rem"></Bubble>
+            <Bubble size="15rem" left="50vw"></Bubble>
+            <div className={styles.divPrueba}></div>
             <header className={styles.headerContainer}>
                 <figure>
                     <a className={styles.logo} href="/">
@@ -35,12 +41,12 @@ function LandingPage() {
                         <button>See more</button>
                     </article>
                 </article>
-                <article>
-                    <figure>
-
+                <article className={styles.principalNew}>
+                    <figure className={styles.principalNewImage}>
+                        <img src={referenceImage} alt="" />
                     </figure>
-                    <h2></h2>
-                    <p></p>
+                    <h2>China Launches First Module of Space Station</h2>
+                    <p>The President of the United States addressed the nation today to announce new measures aimed at tackling the ongoing climate crisis. The plan includes a major shift towards renewable energy sources, with a goal of achieving net-zero greenhouse gas emissions by 2050.</p>
                 </article>
             </main>
         </article>
