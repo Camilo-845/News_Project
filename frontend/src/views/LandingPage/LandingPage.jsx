@@ -53,7 +53,12 @@ function LandingPage() {
                     <p>The President of the United States addressed the nation today to announce new measures aimed at tackling the ongoing climate crisis. The plan includes a major shift towards renewable energy sources, with a goal of achieving net-zero greenhouse gas emissions by 2050.</p>
                 </article>
             </main>
-            <NewsSection size="medium" data={datosPruebaNewsSection}></NewsSection>
+            <article className={styles.newsCarrousels}>
+                <Bubble size="20rem" bottom="-1rem" right="20rem"></Bubble>
+                <Bubble size="15rem" bottom="1rem" left="15rem"></Bubble>
+                <NewsSection size="medium" data={datosPruebaNewsSection}></NewsSection>
+
+            </article>
         </article>
     )
 }

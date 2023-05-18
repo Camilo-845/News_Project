@@ -194,3 +194,6 @@
   color: rgba(255, 255, 255, 0.855);
   backdrop-filter: blur(8px);
 }
+.newsCarrousels {
+  position: relative;
+}
