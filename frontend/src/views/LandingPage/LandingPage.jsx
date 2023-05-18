@@ -1,12 +1,16 @@
 import React from "react";
 import styles from "./LandingPage.module.css"
-import referenceImage from "../../../../referenceImages/_06aded8d-679a-4e15-9333-0de56adecb84.jpg"
+import referenceImage from "../../../../referenceImages/_06aded8d-679a-4e15-9333-0de56adecb84.jpg";
+
 import Bubble from "../../components/Bubble/Bubble";
+import NewsSection from "../../components/NewsSections/NewsSection";
+import { datosPruebaNewsSection } from "../../utils/data";
 
 function LandingPage() {
     return (
         <article className={styles.mainContainer}>
-            <Bubble size="30rem" right="1rem"></Bubble>
+            <Bubble size="30rem" right="1rem" bottom="1rem"></Bubble>
+            <Bubble size="15rem" right="1rem"></Bubble>
             <Bubble size="31rem"></Bubble>
             <Bubble size="15rem" left="50vw"></Bubble>
             <div className={styles.divPrueba}></div>
@@ -49,6 +53,7 @@ function LandingPage() {
                     <p>The President of the United States addressed the nation today to announce new measures aimed at tackling the ongoing climate crisis. The plan includes a major shift towards renewable energy sources, with a goal of achieving net-zero greenhouse gas emissions by 2050.</p>
                 </article>
             </main>
+            <NewsSection size="medium" data={datosPruebaNewsSection}></NewsSection>
         </article>
     )
 }
