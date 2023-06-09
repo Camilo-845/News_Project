@@ -57,8 +57,22 @@ function LandingPage() {
                 <Bubble size="20rem" bottom="-1rem" right="20rem"></Bubble>
                 <Bubble size="15rem" bottom="1rem" left="15rem"></Bubble>
                 <NewsSection size="medium" data={datosPruebaNewsSection}></NewsSection>
-
             </article>
+            <article className={styles.categoriesCarrousels}>
+                <Bubble size="20rem" bottom="-1rem" right="20rem"></Bubble>
+                <Bubble size="15rem" bottom="1rem" left="15rem"></Bubble>
+                <h1 className={styles.categoryName}>Technology</h1>
+                <NewsSection size="small" data={datosPruebaNewsSection}></NewsSection>
+                <h1 className={styles.categoryName}>Sports</h1>
+                <NewsSection size="small" data={datosPruebaNewsSection}></NewsSection>
+                <h1 className={styles.categoryName}>Business</h1>
+                <NewsSection size="small" data={datosPruebaNewsSection}></NewsSection>
+                <h1 className={styles.categoryName}>Health</h1>
+                <NewsSection size="small" data={datosPruebaNewsSection}></NewsSection>
+            </article>
+            <footer className={styles.footer}>
+
+            </footer>
         </article>
     )
 }

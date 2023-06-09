@@ -3,7 +3,9 @@ import styles from "./NewsSection.module.css"
 
 function NewsSection({ size, data }) {
     const customStyle = {
-        /* width: (size === "medium") ? "15rem" : "10rem", */
+        "min-width": (size === "medium") ? "20rem" : "15rem",
+        "max-width": (size === "medium") ? "20rem" : "15rem",
+        height: (size === "medium") ? "max-content" : "15rem"
     }
     return (
         <section className={styles.mainContainer}>
