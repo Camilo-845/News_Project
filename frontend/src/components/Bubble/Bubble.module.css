@@ -2,5 +2,5 @@
     background: radial-gradient(50% 50% at 50% 50%, rgba(54, 193, 177, 0.122) 0%, rgba(54, 193, 177, 0) 100%);
     position: absolute;
     border-radius: 100%;
-    z-index: -1;
+    z-index: -10;
 }

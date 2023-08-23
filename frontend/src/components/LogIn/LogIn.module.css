@@ -1,0 +1,37 @@
+.mainContainer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+.loginContainer{
+    width: 50%;
+    position:relative;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.mainText{
+    background-color: #EDAA25;
+    color: #010221;
+    width: 45%;
+}
+
+.formContainer{
+    width: 55%;
+    background-color: #010221;
+}
+.exitButton{
+    position:absolute;
+    right: 5px;
+    top: 5px;
+}
+.exitButton button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}

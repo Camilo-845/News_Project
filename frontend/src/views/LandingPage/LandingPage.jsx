@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./LandingPage.module.css"
 import referenceImage from "../../../../referenceImages/_06aded8d-679a-4e15-9333-0de56adecb84.jpg";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 import Bubble from "../../components/Bubble/Bubble";
 import NewsSection from "../../components/NewsSections/NewsSection";
@@ -21,12 +22,16 @@ function LandingPage() {
                     </a>
                 </figure>
                 <section className={styles.signButtons}>
-                    <button>
-                        <h1 className={styles.login}>LogIn</h1>
-                    </button>
-                    <button>
-                        <h1 className={styles.signup}>SignUp</h1>
-                    </button>
+                    <a href="/login">
+                        <button>
+                            <h1 className={styles.login}>LogIn</h1>
+                        </button>
+                    </a>
+                    <a href="/signup">
+                        <button>
+                            <h1 className={styles.signup}>SignUp</h1>
+                        </button>
+                    </a>
                 </section>
             </header>
             <main className={styles.mainSection}>
@@ -54,7 +59,7 @@ function LandingPage() {
                 </article>
             </main>
             <article className={styles.newsCarrousels}>
-                <Bubble size="20rem" bottom="-1rem" right="20rem"></Bubble>
+                <Bubble size="20rem"></Bubble>
                 <Bubble size="15rem" bottom="1rem" left="15rem"></Bubble>
                 <NewsSection size="medium" data={datosPruebaNewsSection}></NewsSection>
             </article>

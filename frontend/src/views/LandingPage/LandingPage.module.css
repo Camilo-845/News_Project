@@ -1,4 +1,8 @@
 .mainContainer {
+  max-width: 95vw;
+  overflow-x: hidden;
+  padding: 1rem;
+  margin: 0rem 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
