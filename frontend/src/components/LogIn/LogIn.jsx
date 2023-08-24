@@ -11,7 +11,7 @@ function LogIn (){
                     <br />
                     <section>
                         <h1>AT!</h1>
-                        <h2>Actuallity</h2>
+                        <h2>Actuality</h2>
                     </section>
                 </section>
                 <section className={styles.formContainer}>
