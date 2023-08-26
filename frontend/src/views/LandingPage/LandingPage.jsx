@@ -46,8 +46,12 @@ function LandingPage() {
                         <h4>Sports</h4>
                     </section>
                     <article className={styles.welcomeButtons}>
-                        <button>SignUp</button>
-                        <button>See more</button>
+                        <a href="/signup">
+                            <button>SignUp</button>
+                        </a>
+                        <a href="/login">
+                            <button>See more</button>
+                        </a>
                     </article>
                 </article>
                 <article className={styles.principalNew}>
