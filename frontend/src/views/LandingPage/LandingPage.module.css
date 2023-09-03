@@ -139,13 +139,13 @@
   transform: scale(1.05);
   box-shadow: 0px 0px 15px #ba7d03;
 }
-.welcomeButtons a :nth-child(1) {
+.welcomeButtons > :nth-child(1) button {
   background: -webkit-linear-gradient(301deg, #ba7d03 0%, #edaa25 100%);
   background: linear-gradient(301deg, #ba7d03 0%, #edaa25 100%);
   box-shadow: 0px 0px 10px #ba7d03;
   color: black;
 }
-.welcomeButtons a :nth-child(2) {
+.welcomeButtons   > :nth-child(2) button {
   border: solid 2px #edaa25;
   box-shadow: 0px 0px 10px #ba7d03;
   background-color: transparent;

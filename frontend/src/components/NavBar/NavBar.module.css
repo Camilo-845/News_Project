@@ -1,0 +1,99 @@
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.headerContainer figure {
+  margin: 0rem 11% 0rem 1rem;
+}
+.logo {
+  font-family: "Times New Roman", Times, serif;
+  color: #edaa25;
+  font-size: 25px;
+  text-decoration: none;
+  text-shadow: 0px 0px 20px #edaa257c;
+}
+.logo h1 {
+    margin: 0px;
+}
+.navButtons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navButtons a {
+    padding: .3rem 2rem;
+    font-family: "Font 2";
+    color: white;
+    text-decoration: none;
+    margin: 0rem 1rem;
+    font-size: 1.5rem;
+}
+.focusButton{
+    position: absolute;
+    left: 10px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px #edaa257c;
+    border: 1px solid #edaa25;
+    height: 2.8rem;
+    width: 8rem;
+    transition: left .5s;
+    z-index: -1;
+}
+.logItems{
+    width: calc(100px + 1rem + 11%);
+    display: flex;
+    margin-right: 1rem;
+}
+.logItems figure{
+    margin-left: 1rem;
+    margin-right: 0rem;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+}
+.logItems > input{
+    border: none;
+    border-radius: 1rem;
+    width: 6rem;
+    background-color: #d9d9d90e;
+    transition: width .3s;
+    padding: 0rem 1rem;
+}
+.logItems button img{
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(10);
+}
+.logItems button {
+    background-color: transparent;
+    border: none;
+    transition: transform .2s;
+}
+
+.logItems button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.logItems > input:focus{
+    width: calc(6rem + 2rem);
+    outline: none;
+    outline: 1px solid #d9d9d92a;
+    box-shadow: 0px 0px 10px #d9d9d958;
+}
+
+
+@font-face {
+    font-family: "Font 1";
+    src: url("../../assets/Deliciozo-AL2GD.ttf");
+}
+@font-face {
+    font-family: "Font 2";
+    src: url("../../assets/MangabeyRegular-rgqVO.otf");
+}
