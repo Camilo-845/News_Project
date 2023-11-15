@@ -3,6 +3,7 @@ import styles from "./Home.module.css"
 import NavBar from "../../components/NavBar/NavBar";
 import RootHome from "./rootHome/RootHome";
 import Favorites from "./favorites/favorites";
+import Footer from "../../components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; 
 function Home() {
     return (
@@ -14,7 +15,9 @@ function Home() {
                     <Route path='/home/favorites' component={Favorites}/>
                 </Switch>
             </Router>
+            <Footer></Footer>
             {/* <iframe width="560" height="315" src="https://musiclab.chromeexperiments.com/Song-Maker/embed/5323389454254080" frameborder="0" allowfullscreen></iframe> */}
+
         </main>
     )
 }
