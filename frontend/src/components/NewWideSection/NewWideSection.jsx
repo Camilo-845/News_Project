@@ -3,17 +3,17 @@ import styles from "./NewWideSection.module.css"
 function NewWideSection({data}){
     const landing = false;
     const defaultData = {
-        id: (data &&data.hasOwnProperty(id))?data.id:"",
-        title: (data &&data.hasOwnProperty(title))?data.title:"",
-        description: (data &&data.hasOwnProperty(description))?data.description.slice(0,150):"",
-        url: (data &&data.hasOwnProperty(url))?data.url:"",
-        author: (data &&data.hasOwnProperty(author))?`Por:${ data.author}`:"",
-        image: (data &&data.hasOwnProperty(image))?data.image:" ",
-        lenguage: (data &&data.hasOwnProperty(lenguage))?data.lenguage:"",
+        id: (data &&data.hasOwnProperty("_id"))?data._id:"",
+        title: (data &&data.hasOwnProperty("title"))?data.title:"",
+        description: (data &&data.hasOwnProperty("description"))?data.description.slice(0,150):"",
+        url: (data &&data.hasOwnProperty("url"))?data.url:"",
+        author: (data &&data.hasOwnProperty("author"))?`Por:${ data.author}`:"",
+        image: (data &&data.hasOwnProperty("image"))?data.image:" ",
+        lenguage: (data &&data.hasOwnProperty("lenguage"))?data.lenguage:"",
         category:[
-            (data &&data.hasOwnProperty(category))?data.category:"",
+            (data &&data.hasOwnProperty("category"))?data.category:"",
         ],
-        published:(data && data.published)?data.published:""
+        published:(data && data.hasOwnProperty("published"))?data.published:""
     }
     return(
         <article className={styles.mainContainer}>

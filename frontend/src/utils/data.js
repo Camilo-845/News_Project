@@ -65,4 +65,38 @@ export const datosPruebaNewsSection = [
     createdAt: "2023-05-17T23:49:32.063Z",
     updatedAt: "2023-05-17T23:49:32.063Z",
   },
+  {
+    "_id": "655b8d768bc8dbc8ea671e51",
+    "id": "24eaf00a-1a1b-4b39-853c-59b2d8ac2445",
+    "title": "A topological mechanism for robust and efficient global oscillations in biological networks. (arXiv:2302.11503v3 [physics.bio-ph] UPDATED)",
+    "description": "Long and stable timescales are often observed in complex biochemical\nnetworks, such as in emergent oscillations. How these robust dynamics persist\nremains unclear, given the many stochastic reactions and shorter time scales\ndemonstrated by underlying components. We propose a topological model with\np...",
+    "url": "http://arxiv.org/abs/2302.11503",
+    "author": "<a href=\"http://arxiv.org/find/physics/1/au:+Zheng_C/0/1/0/all/0/1\">Chongbin Zheng</a>, <a href=\"http://arxiv.org/find/physics/1/au:+Tang_E/0/1/0/all/0/1\">Evelyn Tang</a>",
+    "image": "https://fotos.perfil.com/2021/10/07/trim/950/534/bitcoin-1241867.jpg",
+    "category": [
+        "academic",
+        "PHYSICS"
+    ],
+    "published": "2023-11-20T16:34:25.000Z",
+    "comments": [],
+    "createdAt": "2023-11-20T16:46:46.521Z",
+    "updatedAt": "2023-11-20T16:46:46.521Z"
+},
+{
+    "_id": "655b8d768bc8dbc8ea671e45",
+    "id": "40af5edf-bcb1-4351-b5fb-e7aeb741129c",
+    "title": "Do bilayer metasurfaces behave as a stack of decoupled single-layer metasurfaces?. (arXiv:2309.14960v2 [physics.optics] UPDATED)",
+    "description": "Flat optics or metasurfaces have opened new frontiers in wavefront shaping\nand its applications. Polarization optics is one prominent area which has\ngreatly benefited from the shape-birefringence of metasurfaces. However, flat\noptics comprising a single layer of meta-atoms can only perform a subset ...",
+    "url": "http://arxiv.org/abs/2309.14960",
+    "author": "<a href=\"http://arxiv.org/find/physics/1/au:+Palmieri_A/0/1/0/all/0/1\">Alfonso Palmieri</a>, <a href=\"http://arxiv.org/find/physics/1/au:+Dorrah_A/0/1/0/all/0/1\">Ahmed H. Dorrah</a>, <a href=\"http://arxiv.org/find/physics/1/au:+Yang_J/0/1/0/all/0/1\">Jun Yang</a>, <a href=\"http://arxiv.org/find/physi",
+    "image": "https://fotos.perfil.com/2021/10/07/trim/950/534/bitcoin-1241867.jpg",
+    "category": [
+        "academic",
+        "PHYSICS"
+    ],
+    "published": "2023-11-20T16:34:25.000Z",
+    "comments": [],
+    "createdAt": "2023-11-20T16:46:46.521Z",
+    "updatedAt": "2023-11-20T16:46:46.521Z"
+},
 ];

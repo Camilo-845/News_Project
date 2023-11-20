@@ -6,8 +6,8 @@ function NewsList({data}){
         <section>
             {data?data.map((element) => {
                 return (
-                    <article key={element._id}>
-                        <NewWideSection name={element.title}></NewWideSection>
+                    <article key={element.id}>
+                        <NewWideSection data={element}></NewWideSection>
                     </article>
                 )
             }):null}
