@@ -6,7 +6,6 @@
   padding: 0rem 1rem;
 }
 .footerLinks {
-  min-width: 1000vh;
   justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;

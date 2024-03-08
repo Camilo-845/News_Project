@@ -5,6 +5,7 @@ import LandingPage from './views/LandingPage/LandingPage';
 import Home from './views/Home/Home';
 import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
+import NewDetail from './views/Home/NewDetail/NewDetail';
 import NotFound from './views/NotFound/NotFound';
 
 import './App.css'
@@ -24,6 +25,9 @@ function App() {
                     </Route>
                     <>
                         <Switch>
+                            <Route path="/new/:id">
+                                <NewDetail></NewDetail>
+                            </Route>
                             <Route path="/home" component={Home} />
                             <Route path="*" component={NotFound} />
                         </Switch>
