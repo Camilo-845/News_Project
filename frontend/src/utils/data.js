@@ -82,21 +82,46 @@ export const datosPruebaNewsSection = [
     "createdAt": "2023-11-20T16:46:46.521Z",
     "updatedAt": "2023-11-20T16:46:46.521Z"
 },
-{
-    "_id": "655b8d768bc8dbc8ea671e45",
-    "id": "40af5edf-bcb1-4351-b5fb-e7aeb741129c",
-    "title": "Do bilayer metasurfaces behave as a stack of decoupled single-layer metasurfaces?. (arXiv:2309.14960v2 [physics.optics] UPDATED)",
-    "description": "Flat optics or metasurfaces have opened new frontiers in wavefront shaping\nand its applications. Polarization optics is one prominent area which has\ngreatly benefited from the shape-birefringence of metasurfaces. However, flat\noptics comprising a single layer of meta-atoms can only perform a subset ...",
-    "url": "http://arxiv.org/abs/2309.14960",
-    "author": "<a href=\"http://arxiv.org/find/physics/1/au:+Palmieri_A/0/1/0/all/0/1\">Alfonso Palmieri</a>, <a href=\"http://arxiv.org/find/physics/1/au:+Dorrah_A/0/1/0/all/0/1\">Ahmed H. Dorrah</a>, <a href=\"http://arxiv.org/find/physics/1/au:+Yang_J/0/1/0/all/0/1\">Jun Yang</a>, <a href=\"http://arxiv.org/find/physi",
-    "image": "https://fotos.perfil.com/2021/10/07/trim/950/534/bitcoin-1241867.jpg",
+  {
+    "_id": "65eb9cf367e181a2ee8c5bec",
+    "id": "c347b49b-93eb-4b3a-b026-ee460131b9bd",
+    "title": "Harris praises Biden's State of the Union, won't commit to a debate with Trump",
+    "description": "In an interview with NBC News Chief White House Correspondent Peter Alexander, Vice President Harris praised President Biden for his State of the Union address but would not say if he would debate former President Trump ahead of the general election. Harris instead encouraged voters to look at the \"...",
+    "url": "https://www.nbcnews.com/nightly-news/video/harris-praises-biden-s-state-of-the-union-won-t-commit-to-a-debate-with-trump-205851717675",
+    "author": "NBCNews.com",
+    "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/mpx/2704722219/2024_03/Video_(48)-9q5g3v.jpg",
     "category": [
-        "academic",
-        "PHYSICS"
+      "academic",
+      "PHYSICS"
     ],
-    "published": "2023-11-20T16:34:25.000Z",
-    "comments": [],
-    "createdAt": "2023-11-20T16:46:46.521Z",
-    "updatedAt": "2023-11-20T16:46:46.521Z"
-},
+    "published": "2024-03-08T18:14:54.000Z",
+    "comments": [
+      {
+        "username": "AnaLu",
+        "comment": "Me encanta este producto! Es muy fácil de usar y funciona de maravilla."
+      },
+      {
+        "username": "JuanPe",
+        "comment": "No estoy seguro de si este producto es adecuado para mí. No es tan fácil de usar como esperaba."
+      },
+      {
+        "username": "MariaF",
+        "comment": "Este producto es genial! Tiene muchas funciones útiles y es muy asequible."
+      },
+      {
+        "username": "LauraC",
+        "comment": "¡Qué gran noticia! Estoy muy contenta por ellos."
+      },
+      {
+        "username": "CarlosR",
+        "comment": "No estoy seguro de qué pensar sobre esta noticia. Es un poco preocupante."
+      },
+      {
+        "username": "CamilaS",
+        "comment": "Esta noticia es muy importante. Espero que tenga un impacto positivo."
+      }
+    ],
+    "createdAt": "2024-03-08T23:19:15.208Z",
+    "updatedAt": "2024-03-08T23:19:15.208Z"
+  },
 ];

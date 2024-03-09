@@ -9,7 +9,7 @@ function NewDetail (){
     return (
         <>
             <NavBar></NavBar>
-            <NewTarget data={datosPruebaNewsSection[0]}></NewTarget>
+            <NewTarget data={datosPruebaNewsSection[5]}></NewTarget>
             <Footer></Footer>
         </>
     )

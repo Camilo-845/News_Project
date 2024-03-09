@@ -3,7 +3,7 @@ import styles from "./CategoryTarget.module.css"
 
 function CategoryTarget({data}){
     return (
-        <article>
+        <article className={styles.mainContainer}>
             <p>{data}</p>
         </article>
     )
