@@ -1,0 +1,136 @@
+.mainContainer{
+    margin:0rem 5%;
+}
+
+.mainContainer > picture{
+    display: block;
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.mainContainer > picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainContent{
+    margin: 0rem 10%;
+}
+.newTitle{
+    margin-top: 1rem;
+}
+.newTitle h1{
+    color: white;
+    font-family: "Font 2";
+    font-size: 3rem;
+    margin: 0rem 0rem;
+    text-align: left;
+    line-height: 3rem;
+}
+
+.newDescription{
+    color: #acb4b7;
+    font-family: "Font 2";
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    text-align: left;
+    line-height: 2rem;
+}
+
+.newUpdated{
+    color: #acb4b7c5;
+    font-family: "Font 2";
+    font-size: 1.3rem;
+    margin: .2rem 0rem;
+    text-align: left;
+}
+
+.newAutor{
+    color: white;
+    font-family: "Font 2";
+    font-size: 1.5rem;
+    margin: 0rem 0rem;
+    text-align: left;
+    line-height: 3rem;
+}
+
+.newOriginalLink{
+    text-align: left;
+    font-family: "Font 2";
+    font-size: 1.5rem;
+}
+.newOriginalLink p{
+    margin: 0rem 0rem;
+}
+.commentsContainer{
+    margin-top: 1rem;
+}
+.commentsContainer h3{
+    color: white;
+    font-family: "Font 2";
+    font-size: 2.4rem;
+    margin: 0rem 0rem;
+    text-align: left;
+    line-height: 3rem;
+}
+
+.commentInput{
+    width: 60%;
+    background-color: #d9d9d912;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    resize:vertical;
+    min-height: 5rem;
+    padding: .5rem;
+}
+.commentSendButton{
+    background-color: #edaa25;
+    color: #010221;
+    font-family: "Font 2";
+    border-radius: 1rem;
+    margin: .2rem .5rem;
+    font-size: 2rem;
+    padding: 0rem 2rem;
+    border: none;
+    transition: transform .3s;
+    height: 3rem;
+}
+.commentSendButton:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+
+.CommentSendContainer{
+    display: flex;
+    align-items: flex-end;
+}
+
+.newCommentsContainer{
+    background-color: #d9d9d92e;
+    border-radius: 1rem;
+    min-height: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.comemntUsername{
+    color: white;
+    font-family: "Font 2";
+    font-size: 1.7rem;
+    margin: 0rem 0rem;
+    text-align: left;
+    line-height: 3rem;
+}
+
+.commetContent{
+    color: #acb4b7c5;
+    font-family: "Font 2";
+    font-size: 1.3rem;
+    margin: .2rem 0rem;
+    text-align: left;
+    margin-left: 1rem;
+}

@@ -12,9 +12,12 @@ const newController = {
             if(!page) page=0;
             page = (page<=0)? 0 : page-1;
             const lastUpdate = await newModel.findOne().sort({ updatedAt: -1 }).limit(1);
-            var minutesFromLastUpdate = parseInt(moment().diff(moment(lastUpdate.updatedAt), 'minutes'));
-            minutesFromLastUpdate = (isNaN(minutesFromLastUpdate))? 0 : minutesFromLastUpdate;
-            if(minutesFromLastUpdate>60){
+            var minutesFromLastUpdate
+            if(lastUpdate != null){
+              minutesFromLastUpdate = parseInt(moment().diff(moment(lastUpdate.updatedAt), 'minutes'));
+              minutesFromLastUpdate = (isNaN(minutesFromLastUpdate))? 0 : minutesFromLastUpdate;
+            }
+            if(lastUpdate == null || minutesFromLastUpdate>60){
               console.log("consultando...")
               var categories = [];
                 const URL = "https://api.currentsapi.services/v1/latest-news?"+`apiKey=${NEWS_API_KEY}`

@@ -1,0 +1,12 @@
+.mainContainer{
+    background-color: #edaa25;
+    color: #010221;
+    font-family: "Font 2";
+    border-radius: 1rem;
+    margin: .2rem .2rem;
+    font-size: 1.7rem;
+    padding: 0rem 2rem;
+}
+.mainContainer p{
+    margin: 0px;
+}

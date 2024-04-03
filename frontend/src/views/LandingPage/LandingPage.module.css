@@ -1,4 +1,8 @@
 .mainContainer {
+  max-width: 94vw;
+  overflow-x: hidden;
+  padding: 1rem;
+  margin: 0rem 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -121,7 +125,7 @@
 }
 .welcomeButtons {
 }
-.welcomeButtons button {
+.welcomeButtons a button {
   border: none;
   padding: 0.5rem 1.5rem;
   margin: 5px 1rem;
@@ -130,18 +134,18 @@
   border-radius: 15px;
   transition: transform 0.2s;
 }
-.welcomeButtons button:hover {
+.welcomeButtons a button:hover {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0px 0px 15px #ba7d03;
 }
-.welcomeButtons :nth-child(1) {
+.welcomeButtons > :nth-child(1) button {
   background: -webkit-linear-gradient(301deg, #ba7d03 0%, #edaa25 100%);
   background: linear-gradient(301deg, #ba7d03 0%, #edaa25 100%);
   box-shadow: 0px 0px 10px #ba7d03;
   color: black;
 }
-.welcomeButtons :nth-child(2) {
+.welcomeButtons   > :nth-child(2) button {
   border: solid 2px #edaa25;
   box-shadow: 0px 0px 10px #ba7d03;
   background-color: transparent;
@@ -210,64 +214,4 @@
   text-shadow: 0px 0px 20px #edaa25b1;
   font-size: 2rem;
   margin: 0rem 1rem;
-}
-
-/* Footer  */
-.footer {
-  border-radius: 20px;
-  background-color: #171834;
-  display: flex;
-  flex-direction: column;
-  padding: 0rem 1rem;
-}
-.footerLinks {
-  min-width: 1000vh;
-  justify-content: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-}
-.footerLinks p {
-  margin: 0.4rem 0px;
-}
-.footerLinks article {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.footerLinks > :nth-child(1) {
-  align-self: flex-start;
-}
-
-.logoFooter {
-  font-family: "Times New Roman", Times, serif;
-  color: #edaa25;
-  font-size: 50px;
-  text-decoration: none;
-  text-shadow: 0px 0px 20px #edaa257c;
-}
-.logoFooter h1 {
-  margin: 0px;
-}
-
-.footerInfo {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-.footerInfo p {
-  margin: 0.4rem 0px;
-  color: wheat;
-}
-.footerInfo article {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.tagDesingBy{
-  font-size: 20px;
-  font-weight: 800;
 }

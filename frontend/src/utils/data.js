@@ -65,4 +65,63 @@ export const datosPruebaNewsSection = [
     createdAt: "2023-05-17T23:49:32.063Z",
     updatedAt: "2023-05-17T23:49:32.063Z",
   },
+  {
+    "_id": "655b8d768bc8dbc8ea671e51",
+    "id": "24eaf00a-1a1b-4b39-853c-59b2d8ac2445",
+    "title": "A topological mechanism for robust and efficient global oscillations in biological networks. (arXiv:2302.11503v3 [physics.bio-ph] UPDATED)",
+    "description": "Long and stable timescales are often observed in complex biochemical\nnetworks, such as in emergent oscillations. How these robust dynamics persist\nremains unclear, given the many stochastic reactions and shorter time scales\ndemonstrated by underlying components. We propose a topological model with\np...",
+    "url": "http://arxiv.org/abs/2302.11503",
+    "author": "<a href=\"http://arxiv.org/find/physics/1/au:+Zheng_C/0/1/0/all/0/1\">Chongbin Zheng</a>, <a href=\"http://arxiv.org/find/physics/1/au:+Tang_E/0/1/0/all/0/1\">Evelyn Tang</a>",
+    "image": "https://fotos.perfil.com/2021/10/07/trim/950/534/bitcoin-1241867.jpg",
+    "category": [
+        "academic",
+        "PHYSICS"
+    ],
+    "published": "2023-11-20T16:34:25.000Z",
+    "comments": [],
+    "createdAt": "2023-11-20T16:46:46.521Z",
+    "updatedAt": "2023-11-20T16:46:46.521Z"
+},
+  {
+    "_id": "65eb9cf367e181a2ee8c5bec",
+    "id": "c347b49b-93eb-4b3a-b026-ee460131b9bd",
+    "title": "Harris praises Biden's State of the Union, won't commit to a debate with Trump",
+    "description": "In an interview with NBC News Chief White House Correspondent Peter Alexander, Vice President Harris praised President Biden for his State of the Union address but would not say if he would debate former President Trump ahead of the general election. Harris instead encouraged voters to look at the \"...",
+    "url": "https://www.nbcnews.com/nightly-news/video/harris-praises-biden-s-state-of-the-union-won-t-commit-to-a-debate-with-trump-205851717675",
+    "author": "NBCNews.com",
+    "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/mpx/2704722219/2024_03/Video_(48)-9q5g3v.jpg",
+    "category": [
+      "academic",
+      "PHYSICS"
+    ],
+    "published": "2024-03-08T18:14:54.000Z",
+    "comments": [
+      {
+        "username": "AnaLu",
+        "comment": "Me encanta este producto! Es muy fácil de usar y funciona de maravilla."
+      },
+      {
+        "username": "JuanPe",
+        "comment": "No estoy seguro de si este producto es adecuado para mí. No es tan fácil de usar como esperaba."
+      },
+      {
+        "username": "MariaF",
+        "comment": "Este producto es genial! Tiene muchas funciones útiles y es muy asequible."
+      },
+      {
+        "username": "LauraC",
+        "comment": "¡Qué gran noticia! Estoy muy contenta por ellos."
+      },
+      {
+        "username": "CarlosR",
+        "comment": "No estoy seguro de qué pensar sobre esta noticia. Es un poco preocupante."
+      },
+      {
+        "username": "CamilaS",
+        "comment": "Esta noticia es muy importante. Espero que tenga un impacto positivo."
+      }
+    ],
+    "createdAt": "2024-03-08T23:19:15.208Z",
+    "updatedAt": "2024-03-08T23:19:15.208Z"
+  },
 ];
