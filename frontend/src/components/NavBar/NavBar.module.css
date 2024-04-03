@@ -51,7 +51,20 @@
     min-height: 2.7rem;
     border: 2px solid white;
     border-radius: 100%;
+    position: relative;
+    align-items: center;
 }
+
+.logItems figure:hover{
+    cursor: pointer;
+}
+
+.userSettignsButton{
+    display: none;
+    background-color: #acb4b7;
+    position: absolute;
+}
+
 .logItems figure h1{
     padding: 0rem;
     margin: 0rem;
@@ -77,7 +90,7 @@
     height: 2rem;
     filter: brightness(10);
 }
-.logItems button {
+.logItems > button {
     background-color: transparent;
     border: none;
     transition: transform .2s;

@@ -19,6 +19,12 @@ function NavBar() {
         searchInput.current.value = "";
     }
 
+    const onClickHandler = (event) => {
+        event.preventDefault();
+        const section = document.getElementById("userIcon");
+        section.style.display = (section.style.display == "none")?"block":"none"
+    }
+
     return (
         <header className={styles.headerContainer}>
             <figure>
@@ -39,10 +45,13 @@ function NavBar() {
             <section className={styles.logItems}>
                 <input type="text" ref={searchInput} onKeyDown={(event) => onPressEnterHandler(event)} id="hola" />
                 <button id="searchButton" onClick={(event) => onSearchHandler(event)}>
-                    <img src="https://www.svgrepo.com/show/521826/search.svg" alt="" />
+                    <img src="https://www.svgrepo.com/show/521826/search.svg" alt="lupa de busqueda" />
                 </button>
-                <figure>
+                <figure onClick={e=>onClickHandler(e)} >
                     <h1>C</h1>
+                    <section id="userIcon" className={styles.userSettignsButton}>
+                        <button >Cerrar Sesion</button>
+                    </section>
                 </figure>
             </section>
         </header>
