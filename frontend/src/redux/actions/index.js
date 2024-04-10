@@ -2,6 +2,7 @@ export const BACKEND_URL="http://localhost:3001/"
 
 export const GET_NEWS_BY_PAGE = "GET_NEWS_BY_PAGE"
 export const GET_NEW_BY_ID = "GET_NEW_BY_ID"
+export const GET_NEWS_BY_CATEGORY = "GET_NEWS_BY_CATEGORY"
 
 //Actions: 
 //News:
@@ -23,7 +24,15 @@ export const getNewById = (id)=>{
         })
     }
 }
-    //Get News by Id
+export const getNewsByCategory = (category) =>{
+    return function(dispatch){
+        return fetch(`${BACKEND_URL}news/category/${category}`)
+        .then((response)=>["200","304"].includes(response.status) ? [] : response.json())
+        .then(data=>{
+            dispatch({type:GET_NEWS_BY_CATEGORY, payload: data, category: category})
+        })
+    }
+}
     //Get News by Category
     //Post Favorite New
     //Get Favorites News
