@@ -1,4 +1,9 @@
-import { GET_NEWS_BY_PAGE, GET_NEW_BY_ID , GET_NEWS_BY_CATEGORY} from "../actions";
+import { 
+  GET_NEWS_BY_PAGE, 
+  GET_NEW_BY_ID,
+  GET_NEWS_BY_CATEGORY,
+  GET_CATEGORIES,
+} from "../actions";
 
 
 const initialState = {
@@ -7,7 +12,8 @@ const initialState = {
     content:[]
   },
   newByIdData:{},
-  newsByCatogory:{}
+  newsByCatogory:{},
+  categories:[]
 }
 
 
@@ -38,6 +44,11 @@ const rootReducer = (state = initialState, action) => {
           }
         }
         return {...state}
+      case GET_CATEGORIES:
+        return {
+          ...state,
+          categories:action.payload
+        }
       default:return {...state}
     }
   };

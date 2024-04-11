@@ -3,6 +3,7 @@ export const BACKEND_URL="http://localhost:3001/"
 export const GET_NEWS_BY_PAGE = "GET_NEWS_BY_PAGE"
 export const GET_NEW_BY_ID = "GET_NEW_BY_ID"
 export const GET_NEWS_BY_CATEGORY = "GET_NEWS_BY_CATEGORY"
+export const GET_CATEGORIES = "GET_CATEGORIES"
 
 //Actions: 
 //News:
@@ -33,11 +34,19 @@ export const getNewsByCategory = (category) =>{
         })
     }
 }
-    //Get News by Category
     //Post Favorite New
     //Get Favorites News
     //Post Comment
 //Categories:
+export const getCategories = ()=>{
+    return function(dispatch){
+        return fetch(`${BACKEND_URL}categories`)
+        .then((response)=>["200","304"].includes(response.status) ? [] : response.json())
+        .then(data=>{
+            dispatch({type:GET_CATEGORIES, payload: data})
+        })
+    }
+}
     //Get Categories
 //User:
     //Create User
