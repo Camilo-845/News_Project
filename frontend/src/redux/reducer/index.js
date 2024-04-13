@@ -3,6 +3,7 @@ import {
   GET_NEW_BY_ID,
   GET_NEWS_BY_CATEGORY,
   GET_CATEGORIES,
+  CREATE_USER
 } from "../actions";
 
 
@@ -13,7 +14,8 @@ const initialState = {
   },
   newByIdData:{},
   newsByCatogory:{},
-  categories:[]
+  categories:[],
+  userToken:""
 }
 
 
@@ -48,6 +50,11 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
           categories:action.payload
+        }
+      case CREATE_USER:
+        return {
+          ...state,
+          userToken: action.payload
         }
       default:return {...state}
     }

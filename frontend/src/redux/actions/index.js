@@ -1,9 +1,9 @@
 export const BACKEND_URL="http://localhost:3001/"
-
 export const GET_NEWS_BY_PAGE = "GET_NEWS_BY_PAGE"
 export const GET_NEW_BY_ID = "GET_NEW_BY_ID"
 export const GET_NEWS_BY_CATEGORY = "GET_NEWS_BY_CATEGORY"
 export const GET_CATEGORIES = "GET_CATEGORIES"
+export const CREATE_USER = "CREATE_USER"
 
 //Actions: 
 //News:
@@ -49,6 +49,23 @@ export const getCategories = ()=>{
 }
     //Get Categories
 //User:
+export const createUser = (data) =>{
+    return function(dispatch){
+        return fetch(`${BACKEND_URL}user/signup`,
+        {
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(data),
+        })
+        .then((response)=>["200","304"].includes(response.status) ? [] : response.json())
+        .then(token=>{
+            dispatch({type:CREATE_USER,payload:token})
+        })
+    }
+}
     //Create User
     //LogIn User
     //Get User Detail
