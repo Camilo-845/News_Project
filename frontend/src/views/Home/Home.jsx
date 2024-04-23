@@ -5,10 +5,26 @@ import RootHome from "./rootHome/RootHome";
 import Favorites from "./favorites/favorites";
 import Footer from "../../components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; 
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from '../../redux/actions/index';
+
 function Home() {
+    const dispatch = useDispatch();
+    
+    
+    var data = useSelector(state=>state.categories)
+
+    const make = (e) =>{
+        e.preventDefault();
+        dispatch(actions.getCategories())
+        .then(()=>{
+            console.log(data)
+        })
+    }
     return (
         <main>
             <NavBar></NavBar>
+            <button onClick={(e)=>make(e)}>hAZLO PA</button>
             <Router>
                 <Switch>
                     <Route exact path='/home' component={RootHome}/>

@@ -3,6 +3,22 @@ import styles from "./LogIn.module.css"
 
 
 function LogIn (){
+    const [state, setState] = React.useState({
+        email: "",
+        password: ""
+    });
+    const onChangeHandler = (event) =>{
+        event.preventDefault();
+        setState({
+            ...state,
+            [event.target ? event.target.name : "nombre"]: (event.target) ? event.target.value : ""
+        })
+    }
+
+    const onClickHandler = (event)=>{
+        event.preventDefault();
+        //hacer peteción a Backend con la información del estado    
+    }
     return (
         <article className={styles.mainContainer}>
             <article className={styles.loginContainer}>
@@ -20,10 +36,10 @@ function LogIn (){
                     <form action="">
                         <section>
                             <h2>Email Address</h2>
-                            <input type="text" />
+                            <input type="text" name="email" onChange={(e)=>onChangeHandler(e)} />
                             <br />
                             <h2>Password</h2>
-                            <input type="text" />
+                            <input type="text" name="password" onChange={(e)=>onChangeHandler(e)} />
                         </section>
                         <br />
                         <br />
