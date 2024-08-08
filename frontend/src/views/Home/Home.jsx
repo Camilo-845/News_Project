@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Home.module.css"
 import NavBar from "../../components/NavBar/NavBar";
 import RootHome from "./rootHome/RootHome";
-import Favorites from "./favorites/favorites";
+import Favorites from "./favorites/Favorites";
 import Footer from "../../components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; 
 function Home() {
