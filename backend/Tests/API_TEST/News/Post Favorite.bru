@@ -1,0 +1,19 @@
+meta {
+  name: Post Favorite
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{LOCAL_URL}}news/favorite?newId=5a2d659c-4cd1-486f-a6b1-3687da02cfbc
+  body: none
+  auth: bearer
+}
+
+params:query {
+  newId: 5a2d659c-4cd1-486f-a6b1-3687da02cfbc
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNhbW1pbG9TYXIiLCJtYWlsIjoiY2FtLnNhZEBhc2RmYXNkZi5lcyIsInVzZXJJZCI6IjY0MWY3ZGJkY2ZlN2ZmNmJmODM0NWI4NSIsImlhdCI6MTY4MDAzNTAyMCwiZXhwIjoxNjgwMTIxNDIwfQ.iCEriDpD8UNOWo_lcNKJlmOudg_nvmJdSLpg2b94-jk
+}

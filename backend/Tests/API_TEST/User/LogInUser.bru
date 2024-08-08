@@ -1,0 +1,18 @@
+meta {
+  name: LogInUser
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{LOCAL_URL}}user/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "mail": "cam.sad@asdfasdf.es",
+      "password": "contraseña"
+  }
+}
